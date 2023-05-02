@@ -170,15 +170,15 @@ Let's see some examples of functions inside our kit.
 To fetch all the records from a table, use the code below:
 
  ```swift
-Task{
-    do{
+Task {
+    do {
         //OData API
         let list:[yourType] = try await api.getTable(table: "tableName")
  
         //Data API
         let list:[yourType] = try await api.getTable(table: "tableName")
         
-    }catch{
+    } catch {
         print(error)
     }
 }
@@ -190,15 +190,15 @@ To create a new record, use the code below:
 
  let object = YourObject()
  
- Task{
-    do{
+ Task {
+    do {
         //OData API
         try await api.createRecord(table: "tableName", data: object)
  
         //Data API
        try await api.createRecord(table: "tableName", data: object)
        
-    }catch{
+    } catch {
         print(error)
     }
  }
@@ -208,15 +208,15 @@ To create a new record, use the code below:
 To delete a record, use the code below:
 
  ```swift
-Task{
-    do{
+Task {
+    do {
         //OData API
         try await api.deleteRecord(table: "tableName", id: "recordId")
  
         //Data API
         try await api.deleteRecord(table: "tableName", id: objectToDelete)
         
-    }catch{
+    } catch {
         print(error)
     }
  }
@@ -229,15 +229,15 @@ To edit a record, use the code below:
  
  let object = YourObject()
   
-Task{
-    do{
+Task {
+    do {
         //OData API
         try await api.editRecord(table: "tableName", id: "recordId", data: object)
  
         //Data API
         try await api.editRecord(table: "tableName", findData: objectToEdit, editData: object)
     
-    }catch{
+    } catch {
         print(error)
     }
 }
@@ -247,15 +247,15 @@ Task{
 To fetch a record using a query, use the code below:
 
  ```swift
- Task{
-    do{
+ Task {
+    do {
         //OData API
         try await api.getTable(table: "tableName", query: "query")
  
         //Data API
         try await api.getTable(table: "tableName", query: "query")
         
-    }catch{
+    } catch {
         print(error)
     }
  }
@@ -265,15 +265,15 @@ To fetch a record using a query, use the code below:
 To the metadata, use the code below:
 
  ```swift
- Task{
-    do{
+ Task {
+    do {
         //OData API
         let metadata: Metadata = try await api.getMetadataAsData()
  
         //Data API
         let metadata: Data = try await api.getMetadataAsData()
     
-    }catch{
+    } catch {
         print(error)
     }
  }
