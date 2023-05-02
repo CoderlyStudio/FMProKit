@@ -118,7 +118,7 @@ This is a very long and complex process and requires time. Every feedback or cra
 [![](https://img.shields.io/badge/Swift%20Package%20Manager-info-informational)](https://www.swift.org/package-manager/)
 
 * Xcode -> File -> Add Packages
-* Insert this link `https://github.com/The-Pier/FMProKit`
+* Insert this link `https://github.com/CoderlyStudio/FMProKit`
 * Add an `import FMProKit` statement
 * Initialize an OData or Data object
 
