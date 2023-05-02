@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "33F6C296-E13E-44A5-8C9A-0EF13FE9A22E"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/FMProKitTests/OData Tests/getFromTable/OData_getRelations_Tests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "testGetRealtionsMultipleTablesEmpty()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - 789e8706942fddb8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - 8ce6ba4c9836081a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - add9953569a31ebe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - cb741bcd30e0f13d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - 789e8706942fdfa8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - 8ce6ba4c98360a0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - add9953569a31cae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4162B3C9-F2A9-4A12-9D3A-C851BC1FC5C7 - cb741bcd30e0f32d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for FMProKitTests.OData_getRelations_Tests.testGetRealtionsMultipleTablesEmpty() async throws -&gt; ()"
+                  moduleName = "FMProKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kekko/Documents/GitHub/FMProKit/Tests/FMProKitTests/OData%20Tests/getFromTable/OData_getRelations_Tests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8BEABA75-4E63-4E49-9A57-7F844867A9C8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/FMProKitTests/OData Tests/getFromTable/OData_getRelations_Tests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "testGetRealtionsWrongRelation()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C742689E-32BF-41EE-91CB-E9E195EDC7B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tests/FMProKitTests/OData Tests/getFromTable/OData_getRelations_Tests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "testGetRealtionsNotExistingId()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
