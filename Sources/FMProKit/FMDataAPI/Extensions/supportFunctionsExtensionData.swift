@@ -32,4 +32,34 @@ public extension FMDataAPI {
             return try await findRecordIds(table: table, data: data)
         }
     }
+    
+    /// The function is used to search a record that matches a recordID
+    /// - Parameters:
+    ///   - table: The name of the table where is needed to fetch the row
+    ///   - recordID: RecordID that matches one record on the database
+    /// - Returns: An array with only one record matching the recordID
+    /// - Throws: a CommonErrors.tableNameMissing error when the table parameter is empty
+    /// - Throws: an HTTPError.errorCode_500_internalServerError error when using the wrong table name or when inserting wrong data inside the table
+    func findRecordUsingID<T: Codable>(table: String, recordID: String) async throws -> [T] {
+        if table.isEmpty {
+            throw FMProErrors.tableNameMissing
+        }
+        
+        let url = "\(baseUri)/layouts/\(table)/records/\(recordID)"
+        let data: Data
+        
+        do {
+            data = try await executeRequest(urlTmp: url, method: .get)
+            
+            
+        } catch {
+            try await fetchToken()
+            return try await findRecordUsingID(table: table, recordID: recordID)
+        }
+        
+        let fetchedRecord = try JSONDecoder().decode(DataModel<T>.self, from: data)
+        
+        return fetchedRecord.response.data.map { $0.fieldData }
+        
+    }
 }
