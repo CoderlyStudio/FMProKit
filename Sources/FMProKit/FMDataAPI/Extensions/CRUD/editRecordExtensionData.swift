@@ -20,10 +20,10 @@ public extension FMDataAPI {
             throw FMProErrors.tableNameMissing
         }
         
-        let recordToEdit: [FieldData<T>] = try await findRecordIds(table: table, data: findData)
+        let recordToEdit = try await findRecordIds(table: table, data: findData)
         
         for edit in recordToEdit {
-            let url = "\(baseUri)/layouts/\(table)/records/\(edit.recordId)"
+            let url = "\(baseUri)/layouts/\(table)/records/\(edit)"
             let insert = Insert(fieldData: editData)
             
             do {

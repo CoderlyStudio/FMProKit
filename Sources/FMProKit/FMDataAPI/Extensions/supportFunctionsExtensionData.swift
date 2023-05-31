@@ -14,7 +14,7 @@ public extension FMDataAPI {
     /// - Returns: All the recordIDs that match the values
     /// - Throws: a CommonErrors.tableNameMissing error when the table parameter is empty
     /// - Throws: an HTTPError.errorCode_500_internalServerError error when using the wrong table name or when inserting wrong data inside the table
-    func findRecordIds<T: Codable>(table: String, data: T) async throws -> [FieldData<T>] {
+    func findRecordIds<T: Codable>(table: String, data: T) async throws -> [String] {
         if table.isEmpty {
             throw FMProErrors.tableNameMissing
         }
@@ -26,7 +26,7 @@ public extension FMDataAPI {
             let fetchedData = try await executeRequest(urlTmp: url, method: .post, data: query)
             let fetchedIds = try JSONDecoder().decode(DataModel<T>.self, from: fetchedData)
             
-            return fetchedIds.response.data
+            return fetchedIds.response.data.map { $0.recordId }
         } catch {
             try await fetchToken()
             return try await findRecordIds(table: table, data: data)
