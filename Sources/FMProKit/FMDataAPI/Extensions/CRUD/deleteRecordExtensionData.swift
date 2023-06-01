@@ -39,10 +39,10 @@ public extension FMDataAPI {
             throw FMProErrors.tableNameMissing
         }
         
-        let recordsToDelete: [FieldData<T>] = try await findRecordIds(table: table, data: data)
+        let recordsToDelete = try await findRecordIds(table: table, data: data)
         
         for delete in recordsToDelete {
-            let urlTmp = "\(baseUri)/layouts/\(table)/records/\(delete.recordId)"
+            let urlTmp = "\(baseUri)/layouts/\(table)/records/\(delete)"
             
             do {
                 _ = try await executeRequest(urlTmp: urlTmp, method: .delete)
