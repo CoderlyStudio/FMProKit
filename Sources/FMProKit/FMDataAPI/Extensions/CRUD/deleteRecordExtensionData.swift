@@ -20,9 +20,11 @@ public extension FMDataAPI {
         }
         
         let urlTmp = "\(baseUri)/layouts/\(table)/records/\(recordID)"
-        
+
         do {
-            _ = try await executeRequest(urlTmp: urlTmp, method: .delete)
+            let data = try await executeRequest(urlTmp: urlTmp, method: .delete)
+            let _ = try JSONDecoder().decode(FMErrorSupport.self, from: data)
+            
         } catch HTTPError.errorCode401Unauthorized {
             try await fetchToken()
             try await deleteRecord(table: table, recordID: recordID)
@@ -45,7 +47,10 @@ public extension FMDataAPI {
             let urlTmp = "\(baseUri)/layouts/\(table)/records/\(delete)"
             
             do {
-                _ = try await executeRequest(urlTmp: urlTmp, method: .delete)
+                let data = try await executeRequest(urlTmp: urlTmp, method: .delete)
+                let fetchedData = try JSONDecoder().decode(FMErrorSupport.self, from: data)
+                try checkResponseCode(messages: fetchedData.messages)
+                
             } catch HTTPError.errorCode401Unauthorized {
                 try await fetchToken()
                 try await deleteRecord(table: table, data: data)

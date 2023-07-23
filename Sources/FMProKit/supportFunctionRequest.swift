@@ -12,7 +12,7 @@ extension APIProtocol {
     ///   - urlTmp: The final url
     ///   - method: The type of the HTTPMethod
     /// - Returns: returns the data fetched from the HTTP request
-    func executeRequest(urlTmp: String, method: HTTPMethod) async throws -> Data {
+    func executeRequest(urlTmp: String, method: HTTPMethod, isData:Bool = false) async throws -> Data {
         guard let url = urlTmp.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
               let requestURL = URL(string: url) else {
             throw URLError(.badURL)
@@ -28,8 +28,12 @@ extension APIProtocol {
         let (data, response) = try await URLSession.shared.data(for: request)
         
         responseJSON = data
-        
-        try (response as? HTTPURLResponse)?.checkResponseCode()
+        do {
+            try (response as? HTTPURLResponse)?.checkResponseCode()
+        } catch HTTPError.errorCode500InternalServerError {
+            let messages = try! JSONDecoder().decode(MessagesModel.self, from: data)
+            try checkResponseCode(messages: messages.messages)
+        }
         
         return data
     }
@@ -59,7 +63,12 @@ extension APIProtocol {
         
         responseJSON = data
         
-        try (response as? HTTPURLResponse)?.checkResponseCode()
+        do {
+            try (response as? HTTPURLResponse)?.checkResponseCode()
+        } catch HTTPError.errorCode500InternalServerError {
+            let messages = try! JSONDecoder().decode(MessagesModel.self, from: data)
+            try checkResponseCode(messages: messages.messages)
+        }
 
         return data
     }

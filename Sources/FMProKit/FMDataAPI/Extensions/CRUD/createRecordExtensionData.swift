@@ -22,7 +22,9 @@ public extension FMDataAPI {
         let insert = Insert(fieldData: data)
         
         do {
-            _ = try await executeRequest(urlTmp: urlTmp, method: .post, data: insert)
+            let data = try await executeRequest(urlTmp: urlTmp, method: .post, data: insert)
+            let _ = try JSONDecoder().decode(FMErrorSupport.self, from: data)
+
         } catch HTTPError.errorCode401Unauthorized {
             try await fetchToken()
             try await createRecord(table: table, data: insert)
