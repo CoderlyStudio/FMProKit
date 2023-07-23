@@ -9,6 +9,10 @@ import Foundation
 
 class DataModel<T: Codable>: Codable {
     var response: Table<T>
+    var messages: [Message]
+}
+class MessagesModel: Codable {
+    var messages: [Message]
 }
 
 class Table<T: Codable>: Codable {

@@ -8,7 +8,7 @@
 import Foundation
 
 public extension FMDataAPI {
-    /// The function is used to get N record from a starting Offest in the defined table
+    /// The function is used to get N record from a starting Offset in the defined table
     /// - Parameters:
     ///   - table: The name of the table where is needed to fetch the rows
     ///   - offset: The starting point from where fetching data
@@ -20,17 +20,13 @@ public extension FMDataAPI {
         }
         
         let urlTmp = "\(baseUri)/layouts/\(table)/records?_offset=\(offset)&_limit=\(numberOfElements)"
-        let data: Data
-        
         do {
-            data = try await executeRequest(urlTmp: urlTmp, method: .get)
+            let data = try await executeRequest(urlTmp: urlTmp, method: .get,isData: true)
+            let fetchedData = try JSONDecoder().decode(DataModel<T>.self, from: data)
+            return fetchedData.response.data.map { $0.fieldData }
         } catch HTTPError.errorCode401Unauthorized {
             try await fetchToken()
             return try await getTable(table: table, offset: offset, numberOfElements: numberOfElements)
         }
-        
-        let fetchedData = try JSONDecoder().decode(DataModel<T>.self, from: data)
-        
-        return fetchedData.response.data.map { $0.fieldData }
     }
 }
