@@ -147,7 +147,7 @@ public extension FMODataAPI {
         let urlTmp = "\(baseUri)/\(table)('\(id)')/\(field)"
         let data = try await executeRequest(urlTmp: urlTmp, method: .get)
         
-        return try decodeJSONSingleValue(data: data)
+        return try decodeJSONSingleField(data: data)
     }
     
     /// Retrieves the value of a field of a specific record
@@ -170,7 +170,7 @@ public extension FMODataAPI {
         let urlTmp = "\(baseUri)/\(table)('\(id.uuidString)')/\(field)"
         let data = try await executeRequest(urlTmp: urlTmp, method: .get)
         
-        return try decodeJSONSingleValue(data: data)
+        return try decodeJSONSingleField(data: data)
     }
     
     /// Retrieves the value of a field of a specific record
@@ -193,7 +193,7 @@ public extension FMODataAPI {
         let urlTmp = "\(baseUri)/\(table)(\(id))/\(field)"
         let data = try await executeRequest(urlTmp: urlTmp, method: .get)
         
-        return try decodeJSONSingleValue(data: data)
+        return try decodeJSONSingleField(data: data)
     }
    
     /// Retrieves the value of a field of a specific record as a binary Data

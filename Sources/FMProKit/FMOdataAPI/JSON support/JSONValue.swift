@@ -10,7 +10,7 @@ struct JSONValue <T: Codable>: Codable {
     var value: [T]
 }
 
-struct JSONSingleValue <T: Codable>: Codable {
+struct JSONSingleField <T: Codable>: Codable {
     var value: T
 }
 
