@@ -80,7 +80,15 @@ public class FMODataAPI: APIProtocol {
     /// - Parameter data: the data that needed to be decoded
     /// - Returns: a generics item
     public func decodeJSONSingleValue<T: Codable>(data: Data) throws -> T {
-            let fetchedData = try JSONDecoder().decode(JSONSingleValue<T>.self, from: data)
-            return fetchedData.value
+            let fetchedData = try JSONDecoder().decode(T.self, from: data)
+            return fetchedData
+    }
+    
+    /// decode the generic struct as a generic object
+    /// - Parameter data: the data that needed to be decoded
+    /// - Returns: a generics item
+    public func decodeJSONSingleField<T: Codable>(data: Data) throws -> T {
+            let fetchedData = try JSONDecoder().decode(JSONSingleField<T>.self, from: data)
+        return fetchedData.value
     }
 }
